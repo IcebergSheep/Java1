@@ -5,15 +5,18 @@ import java.util.Scanner;
 public class if16 {
     public static void main(String[] args){
         System.out.println("숫자를 입력하세요>");
+
         Scanner num = new Scanner(System.in);
         int a = num.nextInt();
         String result ="";
-        
-        for(int i=a; i>0; i/=2) {
-            result = String.valueOf(i%2) + result;
+        if(a>31 || a<16) {
+            System.out.println("다시 입력해주세요");
         }
-
-        System.out.println(result);
-
+        else {
+            for(int i=a; i>0; i/=2) {
+                result = String.valueOf(i%2) + result;
+            }
+            System.out.println(result);
+        }
     }
 }
